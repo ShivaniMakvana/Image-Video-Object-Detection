@@ -13,6 +13,9 @@ export default function NavigationButton() {
       router.push("/image"); // Navigate to the image route
     }
   };
+  
+  // Hide button if pathname is not "/" or "/image"
+  if (pathname !== "/" && pathname !== "/image") return null;
 
   return (
     <button
